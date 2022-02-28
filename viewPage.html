@@ -2,18 +2,19 @@
 <head>
 <script>
 
-function Saikoro() {
+function roll_the_dice() {
 
 	let saikoro = Math.floor( Math.random() * 6) +1;
-	document.getElementById("kekka").innerHTML = saikoro;
+	document.getElementById("saikoro_me").innerHTML = saikoro;
+    document.getElementById("sainome").src= saikoro + ".jpg";
 }
 
 </script>
 </head>
 <body>
-
-<button onclick="Saikoro();">　サイコロを振る　</button>
-<p id="kekka"></p>
+<p><img id="sainome" src="1.jpg" width="50" height="50"></p>
+<button onclick="roll_the_dice();">　サイコロを振る　</button>
+<p id="saikoro_me"></p>
 
 </body>
 </html>
