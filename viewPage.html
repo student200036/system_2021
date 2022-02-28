@@ -4,17 +4,30 @@
 
 function roll_the_dice() {
 
-	let saikoro = Math.floor( Math.random() * 6) +1;
-	document.getElementById("saikoro_me").innerHTML = saikoro;
-    document.getElementById("sainome").src= saikoro + ".jpg";
+	let saikoro1 = Math.floor( Math.random() * 6) +1;
+    let saikoro2 = Math.floor( Math.random() * 6) +1;
+    let saikoro3 = Math.floor( Math.random() * 6) +1;
+    const message = "";
+	document.getElementById("saikoro_me1").innerHTML = saikoro1;
+    document.getElementById("saikoro_me2").innerHTML = saikoro2;
+    document.getElementById("saikoro_me3").innerHTML = saikoro3;
+    
+    if(saikoro1 ==1 && saikoro2 ==1 && saikoro3 ==1){
+        message = "ピンゾロオオオオオオオォォォォォォ！！！";
+    }
+    document.getElementById("message").innerHTML = message;
 }
 
 </script>
 </head>
 <body>
-<p><img id="sainome" src="1.jpg" width="50" height="50"></p>
-<button onclick="roll_the_dice();">　サイコロを振る　</button>
-<p id="saikoro_me"></p>
+    <h1>チンチロ...!</h1>
+    1つ目のサイコロ:<p id="saikoro_me1"></p>
+    2つ目のサイコロ:<p id="saikoro_me2"></p>
+    3つ目のサイコロ:<p id="saikoro_me3"></p>
+    <h1 id="message"></h1>
+    <button onclick="roll_the_dice()">　サイコロを振る　</button>
+
 
 </body>
 </html>
